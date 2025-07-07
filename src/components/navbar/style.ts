@@ -5,7 +5,9 @@ export const Header = styled("header")`
   position: fixed;
   z-index: 10;
   padding: 35px 50px 0 50px;
-
+  a {
+    cursor: pointer;
+  }
   .burger {
     cursor: pointer;
   }

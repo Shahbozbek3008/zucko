@@ -27,9 +27,9 @@ export const PageTransitionOverlay = ({
       isFirstLoad.current = false;
 
       setTimeout(() => {
-        setShowOverlay(false); // overlayni yashirish
-        setCanRender(true); // sahifani render qilish
-      }, 700); // animatsiya davomiyligi
+        setShowOverlay(false);
+        setCanRender(true);
+      }, 700);
     };
 
     router.events.on("routeChangeStart", handleStart);

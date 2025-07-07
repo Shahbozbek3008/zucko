@@ -18,7 +18,8 @@ export const NavbarDrawer = ({ opened, close }: DrawerProps) => {
 
   return (
     <Drawer
-      size="xl"
+      size="100%"
+      h="100%"
       title=""
       position="top"
       opened={opened}
@@ -35,6 +36,7 @@ export const NavbarDrawer = ({ opened, close }: DrawerProps) => {
         },
         content: {
           backgroundColor: COLORS.MAIN_COLOR,
+          overflow: "hidden",
         },
       }}
     >
@@ -68,7 +70,11 @@ export const NavbarDrawer = ({ opened, close }: DrawerProps) => {
           <Grid gutter={25}>
             {CONTACTS.map((contact) => {
               return (
-                <Grid.Col key={contact.id} span={{ base: 12, lg: 6 }}>
+                <Grid.Col
+                  key={contact.id}
+                  span={{ base: 12, lg: 6 }}
+                  data-aos="fade-left"
+                >
                   <List>
                     <Text mb="33px">{contact.header_name}</Text>
                     <ListItem className="contact">

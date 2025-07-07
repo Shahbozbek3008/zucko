@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Button, ButtonProps } from "@mantine/core";
+import { Button, type ButtonProps } from "@mantine/core";
 import { motion } from "framer-motion";
 
 interface StyledButtonProps extends ButtonProps {

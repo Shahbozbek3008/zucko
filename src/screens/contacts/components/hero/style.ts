@@ -42,6 +42,7 @@ export const Content = styled("div")`
     gap: 20px;
     h1 {
       font-size: 65px;
+      line-height: 1;
     }
 
     p {

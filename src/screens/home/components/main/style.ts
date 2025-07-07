@@ -1,5 +1,7 @@
 import { COLORS } from "@/constants/colors";
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import { Button, type ButtonProps } from "@mantine/core";
 
 export const HeroSection = styled("section")`
   padding-bottom: 100px;
@@ -49,6 +51,7 @@ export const HeroSection = styled("section")`
     h1 {
       font-size: 63px !important;
       line-height: 1;
+      white-space: nowrap;
     }
     .hero-text {
       font-size: 18px;
@@ -57,5 +60,40 @@ export const HeroSection = styled("section")`
     p {
       font-size: 16px;
     }
+  }
+`;
+
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
+export const PlayButton = styled(Button)<ButtonProps>`
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ${pulse} 3s ease-in-out infinite;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 `;

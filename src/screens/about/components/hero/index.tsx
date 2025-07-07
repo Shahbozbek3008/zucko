@@ -1,14 +1,7 @@
 import { Grid } from "@mantine/core";
-import VideoBg from "@/assets/images/video.png";
-import {
-  DescriptionText,
-  ImageWrapper,
-  LeftColumn,
-  PlayButton,
-  RightColumn,
-  ShowReelText,
-} from "./style";
+import { DescriptionText, LeftColumn } from "./style";
 import { BreadText } from "@/styles/global";
+import { ImageHoverPlay } from "@/components/video";
 
 export const Hero = () => {
   return (
@@ -27,12 +20,9 @@ export const Hero = () => {
         </LeftColumn>
       </Grid.Col>
       <Grid.Col span={{ base: 12, md: 6 }}>
-        <RightColumn>
-          <ImageWrapper bg={VideoBg.src} />
-          <ShowReelText className="left">SHOW </ShowReelText>
-          <PlayButton>▶</PlayButton>
-          <ShowReelText className="right">REEL</ShowReelText>
-        </RightColumn>
+        {/* <RightColumn> */}
+        <ImageHoverPlay />
+        {/* </RightColumn> */}
       </Grid.Col>
     </Grid>
   );

@@ -1,7 +1,8 @@
 import { COLORS } from "@/constants/colors";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-export const List = styled("ul")`
+export const List = styled(motion.ul)`
   padding: 0;
   margin: 0;
   p {

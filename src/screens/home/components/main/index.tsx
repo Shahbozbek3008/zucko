@@ -2,14 +2,13 @@ import React from "react";
 import { Divider, Flex, Grid, Group, Stack, Text, Title } from "@mantine/core";
 import { HeroSection } from "./style";
 import { COLORS } from "@/constants/colors";
-import Image from "next/image";
-import IconHeroImage from "@/assets/images/hero-image.svg";
 import { IconArrowUpRight } from "@/assets/icons/arrow-up-right";
 import { AnimatedButton } from "@/components/animate-button";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { BreadText } from "@/styles/global";
 import { AnimatedZoomText } from "@/components/animate-text/text";
+import { HoverPlayImage } from "./image";
 
 export const Hero = () => {
   const router = useRouter();
@@ -27,7 +26,7 @@ export const Hero = () => {
           <Divider color={COLORS.MAIN_COLOR} mt={-20} />
           <Grid align="end">
             <Grid.Col span={{ base: 12, lg: 6, md: 12 }}>
-              <Image src={IconHeroImage} alt="hero-image" priority />
+              <HoverPlayImage />
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 6, md: 12 }}>
               <Flex direction="column" w="100%" gap="40px">
