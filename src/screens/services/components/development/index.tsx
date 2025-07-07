@@ -1,11 +1,12 @@
 import React from "react";
 import { COLORS } from "@/constants/colors";
-import { Button, Grid, Stack, Text, Title } from "@mantine/core";
+import { Grid, Stack, Text, Title } from "@mantine/core";
 import { DEVELOPMENT } from "./constants";
 import { Content, Left, Right } from "./style";
 import Image from "next/image";
 import { IconArrowUpRight } from "@/assets/icons/arrow-up-right";
 import { useRouter } from "next/router";
+import { AnimatedButton } from "@/components/animate-button";
 
 export const Development = () => {
   const router = useRouter();
@@ -26,15 +27,12 @@ export const Development = () => {
                     <Text>{dev.number}</Text>
                     <Title>{dev.name}</Title>
                     <Text>{dev.description}</Text>
-                    <Button
-                      h={60}
-                      w={274}
-                      variant="outline"
-                      rightSection={<IconArrowUpRight />}
+                    <AnimatedButton
+                      defaultText="View projects"
+                      hoverText="View projects"
                       onClick={() => router.push(dev.link)}
-                    >
-                      Go to Projects
-                    </Button>
+                      rightSection={<IconArrowUpRight />}
+                    />
                   </Stack>
                 </Left>
                 <Right>

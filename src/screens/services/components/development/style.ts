@@ -86,7 +86,6 @@ export const Content = styled("div")`
 
   button {
     border-radius: 30px;
-    border: 1.5px solid var(--Colors-Brand-100, #e84511);
     color: var(--Colors-Brand-100, #e84511) !important;
     font-family: "Almarai", sans-serif;
     font-size: 20px;

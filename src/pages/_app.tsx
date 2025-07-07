@@ -8,6 +8,7 @@ import type { AppProps } from "next/app";
 import NextNProgress from "nextjs-progressbar";
 import { CustomCursor } from "@/components/cursor";
 import AOS from "aos";
+// import { PageTransitionOverlay } from "@/components/page-overlay";
 
 const theme = createTheme({});
 
@@ -24,21 +25,23 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <MantineProvider theme={theme}>
+      <NextNProgress
+        color="#DB3333"
+        startPosition={0.3}
+        stopDelayMs={3}
+        height={3}
+        showOnShallow={true}
+        transformCSS={(css) => {
+          return <style>{css}</style>;
+        }}
+        options={{ easing: "ease", speed: 500, showSpinner: false }}
+        nonce="my-nonce"
+      />
       <Layout>
-        <NextNProgress
-          color="#DB3333"
-          startPosition={0.3}
-          stopDelayMs={3}
-          height={3}
-          showOnShallow={true}
-          transformCSS={(css) => {
-            return <style>{css}</style>;
-          }}
-          options={{ easing: "ease", speed: 500, showSpinner: false }}
-          nonce="my-nonce"
-        />
+        {/* <PageTransitionOverlay> */}
         <CustomCursor />
         <Component {...pageProps} />
+        {/* </PageTransitionOverlay> */}
       </Layout>
     </MantineProvider>
   );

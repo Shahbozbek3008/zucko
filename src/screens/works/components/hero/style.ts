@@ -42,7 +42,7 @@ export const Content = styled("div")`
     padding-bottom: 50px;
     h1 {
       font-size: 65px;
-      line-height: inherit;
+      line-height: 1;
     }
     p {
       width: 100%;
