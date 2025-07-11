@@ -5,6 +5,7 @@ import { Clients } from "./components/clients";
 import { Projects } from "./components/projects";
 import { Statistics } from "./components/statistics";
 import { ImageGallery } from "./components/gallery";
+import { LatestWorks } from "./components/latest-works";
 
 const HomeScreen = () => {
   return (
@@ -12,6 +13,7 @@ const HomeScreen = () => {
       <Content>
         <Hero />
       </Content>
+      <LatestWorks />
       <Clients />
       <Projects />
       <Statistics />

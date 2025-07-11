@@ -1,18 +1,11 @@
 import React, { useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import {
-  Container,
-  BackgroundWrapper,
-  MotionBackground,
-  Overlay,
-  Content,
-  Word,
-} from "./style";
-
 import Podium from "@/assets/images/works/podium.png";
 import VisionPrime from "@/assets/images/works/vision-prime.avif";
 import WaveCareApp from "@/assets/images/works/wave-care-app.png";
 import Fractal from "@/assets/images/works/fractal.avif";
+import { Content, Section } from "./style";
+import { BreadText } from "@/styles/global";
+import { Title } from "@mantine/core";
 
 const backgroundImages = [
   Podium.src,
@@ -24,41 +17,21 @@ const backgroundImages = [
 const words = ["PODIUM AW23", "VISION PRIME", "WAVE CAR APP", "FRACTAL"];
 
 export const LatestWorks = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [bgImage, setBgImage] = useState<string>(Podium.src);
 
   return (
-    <Container>
-      <BackgroundWrapper>
-        {backgroundImages.map((src, i) => (
-          <AnimatePresence key={i}>
-            {hoveredIndex === i && (
-              <MotionBackground
-                key={i}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.05 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                style={{ backgroundImage: `url(${src})` }}
-              />
-            )}
-          </AnimatePresence>
-        ))}
-      </BackgroundWrapper>
-
-      <Overlay />
-
-      {/* Text */}
+    <Section bgImage={bgImage}>
+      <BreadText style={{ color: "#fff" }}>/ Latest Works</BreadText>
       <Content>
-        {words.map((word, i) => (
-          <Word
-            key={i}
-            onMouseEnter={() => setHoveredIndex(i)}
-            onMouseLeave={() => setHoveredIndex(null)}
+        {words.map((word, index) => (
+          <Title
+            key={word}
+            onMouseEnter={() => setBgImage(backgroundImages[index])}
           >
             {word}
-          </Word>
+          </Title>
         ))}
       </Content>
-    </Container>
+    </Section>
   );
 };
