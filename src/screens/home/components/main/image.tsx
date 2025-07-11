@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import IconHeroImage from "@/assets/images/hero-image.svg";
 import { PlayButton } from "./style";
-import { Text } from "@mantine/core";
+import { Image, Text } from "@mantine/core";
 import { COLORS } from "@/constants/colors";
 import {
   Wrapper,
@@ -47,7 +46,7 @@ export const HoverPlayImage = () => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <Image src={IconHeroImage} alt="hero-image" priority />
+      <Image src={IconHeroImage.src} alt="hero-image" />
       <StaticText position="left">
         <Text
           fw={600}

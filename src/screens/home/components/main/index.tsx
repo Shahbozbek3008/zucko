@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Flex, Grid, Group, Stack, Text, Title } from "@mantine/core";
+import { Divider, Flex, Grid, Group, Stack, Title } from "@mantine/core";
 import { HeroSection } from "./style";
 import { COLORS } from "@/constants/colors";
 import { IconArrowUpRight } from "@/assets/icons/arrow-up-right";
@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { BreadText } from "@/styles/global";
 import { AnimatedZoomText } from "@/components/animate-text/text";
 import { HoverPlayImage } from "./image";
+import { BlurInUpCharacter } from "@/components/blur-text";
 
 export const Hero = () => {
   const router = useRouter();
@@ -30,13 +31,11 @@ export const Hero = () => {
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 6, md: 12 }}>
               <Flex direction="column" w="100%" gap="40px">
-                <Text className="hero-text">
-                  We’re a brand and digital studio based in  Miami, USA,
-                  offering complete solutions from concept to execution,
-                  to build, transform and leverage your business. We assist
-                  and educate our client in making the best use of the solutions
-                  we build with them.
-                </Text>
+                <BlurInUpCharacter
+                  text="We’re a brand and digital studio based in Miami, USA, offering complete solutions from concept to execution, to build, transform and leverage your business. We assist and educate our client in making the best use of the solutions we build with them."
+                  delay={0.3}
+                  duration={3}
+                />
                 <Group>
                   <AnimatedButton
                     defaultText="About us"

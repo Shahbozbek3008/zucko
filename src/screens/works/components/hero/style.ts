@@ -4,8 +4,10 @@ export const Content = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 50px;
+  align-items: center;
   padding-bottom: 100px;
-  h1 {
+
+  .hero-title {
     color: var(--Colors-Brand-100, #e84511);
     text-align: center;
     font-family: "Big Shoulders Display", sans-serif;
@@ -17,7 +19,7 @@ export const Content = styled("div")`
     text-transform: uppercase;
   }
 
-  p {
+  .hero-description {
     color: var(--Colors-Brand-100, #e84511);
     font-family: "Almarai", sans-serif;
     font-size: 24px;
@@ -32,7 +34,7 @@ export const Content = styled("div")`
   }
 
   @media (max-width: 1200px) {
-    h1 {
+    .hero-title {
       font-size: 100px;
     }
   }
@@ -40,11 +42,11 @@ export const Content = styled("div")`
   @media (max-width: 800px) {
     gap: 20px;
     padding-bottom: 50px;
-    h1 {
+    .hero-title {
       font-size: 65px;
       line-height: 1;
     }
-    p {
+    .hero-description {
       width: 100%;
       font-size: 18px;
       line-height: 1.3;

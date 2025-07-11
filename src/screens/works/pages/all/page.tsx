@@ -8,7 +8,7 @@ const WorksAllScreen = () => {
       <Content>
         <Hero
           title="Latest Projects"
-          description={`<span>With our forte in creative direction,</span> photography, film and art direction, your vision becomes an adventure we embark on as Zucko to bring to life. Just like finding the perfect pair of jeans, no creative solution is one-size-fits-all and we’re all ears.`}
+          description={`With our forte in creative direction, photography, film and art direction, your vision becomes an adventure we embark on as Zucko to bring to life. Just like finding the perfect pair of jeans, no creative solution is one-size-fits-all and we’re all ears.`}
         />
       </Content>
       <Filter />
