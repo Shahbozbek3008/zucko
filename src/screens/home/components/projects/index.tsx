@@ -5,8 +5,11 @@ import { Divider, Flex, Grid, Text, Title } from "@mantine/core";
 import { PROGRAMMING_DIRECTIONS } from "./constants";
 import { AnimatedButton } from "@/components/animate-button";
 import { IconArrowUpRight } from "@/assets/icons/arrow-up-right";
+import { useRouter } from "next/router";
 
 export const Projects = () => {
+  const router = useRouter();
+
   return (
     <ProjectsSection>
       <Grid gutter={30}>
@@ -32,6 +35,7 @@ export const Projects = () => {
                         hoverText="View Projects"
                         rightSection={<IconArrowUpRight />}
                         color="#fff"
+                        onClick={() => router.push(dir.link)}
                       />
                     </Flex>
                   </Flex>

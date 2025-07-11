@@ -10,6 +10,26 @@ export const LeftColumn = styled.div`
   padding-right: 20px;
   min-height: 400px;
 
+  .hero-description {
+    color: ${COLORS.MAIN_COLOR};
+    font-family: "Almarai", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    & > span:first-child {
+      margin-left: 50px;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 18px;
+      text-align: justify;
+      line-height: 1.3;
+    }
+  }
+
   @media (max-width: 768px) {
     padding-right: 0;
     text-align: center;

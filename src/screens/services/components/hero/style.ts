@@ -3,21 +3,25 @@ import styled from "@emotion/styled";
 export const Content = styled("div")`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
   padding-bottom: 50px;
-  h1 {
+  .hero-title {
     color: var(--Colors-Brand-100, #e84511);
     text-align: center;
     font-family: "Big Shoulders Display", sans-serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 800;
-    line-height: 120px; /* 100% */
+    line-height: 120px;
     letter-spacing: -1.2px;
     text-transform: uppercase;
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 
-  p {
+  .hero-description {
     color: var(--Colors-Brand-100, #e84511);
     font-family: "Almarai", sans-serif;
     font-size: 24px;
@@ -26,23 +30,20 @@ export const Content = styled("div")`
     line-height: 30px; /* 125% */
     text-transform: uppercase;
     width: 50%;
-    span {
-      padding-left: 100px;
-    }
   }
 
   @media (max-width: 1200px) {
-    h1 {
+    .hero-title {
       font-size: 100px;
       line-height: 1;
     }
   }
 
   @media (max-width: 800px) {
-    h1 {
+    .hero-title {
       font-size: 65px;
     }
-    p {
+    .hero-description {
       width: 100%;
       font-size: 18px;
     }

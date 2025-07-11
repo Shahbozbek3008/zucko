@@ -17,7 +17,11 @@ export const Development = () => {
         {DEVELOPMENT.map((dev, i: number) => {
           const isEven = dev.id % 2 === 0;
           return (
-            <Grid.Col span={{ base: 12, lg: 12, md: 12 }} key={dev.id}>
+            <Grid.Col
+              span={{ base: 12, lg: 12, md: 12 }}
+              key={dev.id}
+              data-aos="fade-up"
+            >
               <Content
                 isEven={isEven}
                 className={DEVELOPMENT.length !== i + 1 ? "last-content" : ""}

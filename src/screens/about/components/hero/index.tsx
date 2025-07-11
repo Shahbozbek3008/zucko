@@ -1,7 +1,8 @@
 import { Grid } from "@mantine/core";
-import { DescriptionText, LeftColumn } from "./style";
+import { LeftColumn } from "./style";
 import { BreadText } from "@/styles/global";
 import { ImageHoverPlay } from "@/components/video";
+import { BlurInUpCharacter } from "@/components/blur-text";
 
 export const Hero = () => {
   return (
@@ -9,14 +10,15 @@ export const Hero = () => {
       <Grid.Col span={{ base: 12, md: 6 }}>
         <LeftColumn>
           <BreadText>/ About</BreadText>
-          <DescriptionText order={2}>
-            <span>We’re a brand and digital studio based in</span>
-            <span>Miami, USA, offering complete solutions from</span>
-            <span>concept to execution, to build, transform</span>
-            <span>and leverage your business. We assist and</span>
-            <span>educate our client in making the best use of</span>
-            <span>the solutions we build with them.</span>
-          </DescriptionText>
+          <BlurInUpCharacter
+            text="We’re a brand and digital studio based in Miami, USA, 
+            offering complete solutions from concept to execution, to build, transform
+            and leverage your business. We assist and educate our client in making the best use of
+            the solutions we build with them."
+            delay={0.15}
+            duration={3}
+            characterClassName="hero-description"
+          />
         </LeftColumn>
       </Grid.Col>
       <Grid.Col span={{ base: 12, md: 6 }}>

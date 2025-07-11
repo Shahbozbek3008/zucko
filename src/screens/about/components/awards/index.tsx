@@ -2,13 +2,13 @@ import { Grid } from "@mantine/core";
 import {
   AwardsSection,
   LeftColumn,
-  DescriptionText,
   RightColumn,
   Table,
   TableRow,
   TableCell,
 } from "./style";
 import { BreadText } from "@/styles/global";
+import { BlurInUpCharacter } from "@/components/blur-text";
 
 export const Awards: React.FC = () => {
   const awardsData = [
@@ -34,11 +34,12 @@ export const Awards: React.FC = () => {
           }}
         >
           <LeftColumn>
-            <DescriptionText order={2}>
-              <span>We strongly believe that</span>
-              <span>awards enhance the value</span>
-              <span>and recognition</span>
-            </DescriptionText>
+            <BlurInUpCharacter
+              text="We strongly believe that awards enhance the value and recognition"
+              delay={0.15}
+              duration={3}
+              characterClassName="hero-description"
+            />
           </LeftColumn>
         </Grid.Col>
 

@@ -4,6 +4,7 @@ import { Left, Right } from "./style";
 import { BreadText } from "@/styles/global";
 import { COLORS } from "@/constants/colors";
 import { CONTACT_DETAILS } from "./constants";
+import { BlurInUpCharacter } from "@/components/blur-text";
 
 export const ContactDetails = () => {
   return (
@@ -22,9 +23,30 @@ export const ContactDetails = () => {
         {CONTACT_DETAILS.map((contact) => {
           return (
             <Stack key={contact.id} className="stack">
-              <li>{contact.location}</li>
-              <li>{contact.phone}</li>
-              <li>{contact.email}</li>
+              <li>
+                <BlurInUpCharacter
+                  text={contact.location}
+                  delay={0.1}
+                  duration={1}
+                  characterClassName="hero-title"
+                />
+              </li>
+              <li>
+                <BlurInUpCharacter
+                  text={contact.phone}
+                  delay={0.1}
+                  duration={1}
+                  characterClassName="hero-title"
+                />
+              </li>
+              <li>
+                <BlurInUpCharacter
+                  text={contact.email}
+                  delay={0.1}
+                  duration={1}
+                  characterClassName="hero-title"
+                />
+              </li>
             </Stack>
           );
         })}

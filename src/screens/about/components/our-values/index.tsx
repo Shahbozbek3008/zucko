@@ -16,6 +16,7 @@ export const OurValues = () => {
           return (
             <Fragment key={dir.id}>
               <Flex
+                data-aos="fade-left"
                 gap={{ base: "26px", lg: "30px" }}
                 direction={{ base: "column", md: "row" }}
               >

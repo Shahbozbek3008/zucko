@@ -5,7 +5,7 @@ export const Content = styled("div")`
   flex-direction: column;
   gap: 50px;
   padding-bottom: 100px;
-  h1 {
+  .hero-title {
     color: var(--Colors-Brand-100, #e84511);
     text-align: center;
     font-family: "Big Shoulders Display", sans-serif;
@@ -15,9 +15,12 @@ export const Content = styled("div")`
     line-height: 120px; /* 100% */
     letter-spacing: -1.2px;
     text-transform: uppercase;
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 
-  p {
+  .hero-description {
     color: var(--Colors-Brand-100, #e84511);
     font-family: "Almarai", sans-serif;
     font-size: 24px;
@@ -32,7 +35,7 @@ export const Content = styled("div")`
   }
 
   @media (max-width: 1200px) {
-    h1 {
+    .hero-title {
       font-size: 100px;
     }
   }
@@ -40,12 +43,12 @@ export const Content = styled("div")`
   @media (max-width: 800px) {
     padding-bottom: 60px;
     gap: 20px;
-    h1 {
+    .hero-title {
       font-size: 65px;
       line-height: 1;
     }
 
-    p {
+    .hero-description {
       font-size: 18px;
       width: 100%;
       line-height: 1.3;

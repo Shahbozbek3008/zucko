@@ -1,1 +1,0 @@
-export { TypeWriterSimpleText } from "./text";

@@ -9,7 +9,7 @@ import Image from "next/image";
 export const OurTeam = () => {
   return (
     <Stack p={{ base: "60px 20px", lg: "100px 50px" }} bg={COLORS.MAIN_WHITE}>
-      <Grid gutter={{ base: "32px", lg: "12px" }}>
+      <Grid gutter={{ base: "32px", lg: "24px" }}>
         <Grid.Col span={{ base: 12, lg: 3 }}>
           <BreadText style={{ color: COLORS.MAIN_COLOR }}>/ Our team</BreadText>
         </Grid.Col>

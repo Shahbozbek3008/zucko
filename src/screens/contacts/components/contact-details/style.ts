@@ -9,7 +9,8 @@ export const Right = styled("ul")`
   .stack {
     gap: 20px;
   }
-  li {
+  li,
+  .hero-title {
     list-style: none;
     color: var(--Colors-Brand-100, #e84511);
     font-family: "Almarai", sans-serif;
@@ -18,6 +19,9 @@ export const Right = styled("ul")`
     font-weight: 400;
     line-height: 30px; /* 150% */
     text-transform: uppercase;
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 1200px) {

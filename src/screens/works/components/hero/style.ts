@@ -17,6 +17,9 @@ export const Content = styled("div")`
     line-height: 120px;
     letter-spacing: -1.2px;
     text-transform: uppercase;
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 
   .hero-description {
