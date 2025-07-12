@@ -13,7 +13,7 @@ export const Development = () => {
 
   return (
     <Stack p={{ base: "60px 20px", lg: "100px 50px" }} bg={COLORS.MAIN_WHITE}>
-      <Grid gutter="50px">
+      <Grid gutter="50px" w="100%">
         {DEVELOPMENT.map((dev, i: number) => {
           const isEven = dev.id % 2 === 0;
           return (

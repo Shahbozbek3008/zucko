@@ -12,7 +12,7 @@ export const Projects = () => {
 
   return (
     <ProjectsSection>
-      <Grid gutter={30}>
+      <Grid gutter={30} w="100%">
         <Grid.Col span={{ base: 12, lg: 6, md: 12 }}>
           <BreadText style={{ color: "#fff" }}>/ What we do</BreadText>
         </Grid.Col>

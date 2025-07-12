@@ -13,6 +13,12 @@ export const Left = styled("div")`
 `;
 export const Right = styled("div")`
   width: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const Content = styled("div")`
