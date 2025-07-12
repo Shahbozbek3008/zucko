@@ -25,7 +25,7 @@ export const Content = styled("div")`
     color: #fff;
     text-align: center;
     font-feature-settings: "liga" off, "clig" off;
-    font-family: "Big Shoulders Display";
+    font-family: "Big Shoulders Display", sans-serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 700;
@@ -36,6 +36,19 @@ export const Content = styled("div")`
 
     &:hover {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    height: 100%;
+    h1 {
+      font-size: 100px;
+    }
+  }
+  @media (max-width: 800px) {
+    height: 100%;
+    h1 {
+      font-size: 65px;
     }
   }
 `;

@@ -16,7 +16,7 @@ export const HeroSection = styled("section")`
   }
   h1 {
     color: ${COLORS.MAIN_COLOR};
-    font-family: "Big Shoulders Display", sans-serif;
+    font-family: "Big Shoulders Display", sans-serif !important;
     font-size: 150px !important;
     font-style: normal;
     font-weight: 800;

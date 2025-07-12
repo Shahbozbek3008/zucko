@@ -47,10 +47,10 @@ export const Content = styled("div")`
       : `
         flex-direction: row;
         & > div:first-of-type {
-          order: 1; /* Left section on the right for odd ids */
+          order: 1; 
         }
         & > div:last-of-type {
-          order: 2; /* Right section on the left for odd ids */
+          order: 2; 
         }
       `}
 
