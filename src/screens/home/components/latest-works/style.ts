@@ -49,6 +49,7 @@ export const Content = styled("div")`
     height: 100%;
     h1 {
       font-size: 65px;
+      line-height: 1.2;
     }
   }
 `;
