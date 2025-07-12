@@ -35,7 +35,6 @@ export const PlayButtonCenterWrapper = styled(motion.div)`
   align-items: center;
   justify-content: center;
   .circle {
-    background: red;
     border-radius: 50%;
     width: 60px;
     height: 60px;

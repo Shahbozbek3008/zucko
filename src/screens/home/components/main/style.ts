@@ -61,6 +61,12 @@ export const HeroSection = styled("section")`
       font-size: 16px;
     }
   }
+
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 50px !important;
+    }
+  }
 `;
 
 const pulse = keyframes`
