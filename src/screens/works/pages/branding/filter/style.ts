@@ -85,7 +85,7 @@ export const Card = styled("div")`
 export const ImageContainer = styled("div")`
   position: relative;
   overflow: hidden;
-  height: 370px;
+  height: 46.25vh;
   cursor: pointer;
   &::after {
     content: "";
