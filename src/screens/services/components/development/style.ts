@@ -19,6 +19,10 @@ export const Right = styled("div")`
     height: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const Content = styled("div")`
@@ -54,7 +58,7 @@ export const Content = styled("div")`
         }
       `}
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
@@ -99,5 +103,20 @@ export const Content = styled("div")`
     font-weight: 400;
     line-height: 30px; /* 150% */
     text-transform: uppercase;
+  }
+
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 50px;
+    }
+  }
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.1;
+    }
   }
 `;

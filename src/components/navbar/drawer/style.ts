@@ -82,4 +82,17 @@ export const ListItem = styled("li")`
       }
     }
   }
+
+  @media (max-width: 1200px) {
+    a {
+      font-size: 80px;
+      line-height: 80px;
+    }
+  }
+  @media (max-width: 800px) {
+    a {
+      font-size: 56px;
+      line-height: 1.1;
+    }
+  }
 `;
